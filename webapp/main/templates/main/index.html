@@ -1,18 +1,193 @@
 {% extends 'main/layout/layout.html' %}
+{% load static %}
 
-{% block title%}Homepage{% endblock %}
+{% block title%}Comfort and functionality meet the beauty of Scandinavian design{% endblock %}
 
 {% block content%}
-    <h1>Homepage</h1>
-    <div class="container">
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque finibus non dolor non sollicitudin. Vivamus augue lectus, congue vitae placerat eu, eleifend quis sapien. Ut ut neque iaculis, egestas orci non, mattis ligula. Donec sed gravida elit. In blandit sapien ac tortor accumsan, at volutpat lacus bibendum. Nulla facilisi. Praesent interdum eros rutrum elementum feugiat. Nunc vitae arcu sit amet felis placerat aliquet. Pellentesque venenatis libero in eleifend ultrices. Etiam consectetur tempus turpis, ut elementum dolor. Nulla ut ornare tortor. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Pellentesque ultrices viverra sollicitudin. Nulla magna nisl, interdum in commodo ac, consectetur eu elit.</p>
-        <p>Aliquam erat volutpat. Vivamus ornare volutpat enim, non efficitur lectus condimentum ut. Fusce nec nunc molestie, malesuada lacus vitae, tristique nibh. Etiam aliquet porta felis. Morbi pharetra rhoncus mauris eget egestas. Phasellus ut augue eu dui interdum porttitor et ut turpis. Vivamus nunc libero, porttitor eu ante ac, tincidunt condimentum dui. Pellentesque vel nisl a risus luctus vulputate a id libero. Nulla venenatis nunc et fermentum malesuada. Proin in leo auctor, vestibulum quam eget, maximus dui. Fusce sagittis condimentum turpis quis volutpat. Etiam a nisi vitae ante elementum porta. Vestibulum congue luctus nunc, vel sagittis risus. In hac habitasse platea dictumst. Pellentesque iaculis sapien nisl, sollicitudin iaculis neque varius venenatis.</p>
-        <p>Suspendisse ut nisi posuere, lacinia ipsum a, pharetra tortor. Vestibulum dapibus facilisis eros, vitae elementum nulla mattis et. Duis sollicitudin ultricies felis, a finibus lacus lacinia ac. Maecenas suscipit justo justo, id lobortis mauris tempor ac. Fusce sodales feugiat elementum. Praesent vehicula eros pellentesque nisl iaculis, sed malesuada sapien pretium. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.</p>
-        <p>Morbi dapibus, dui et euismod congue, lacus nunc consectetur eros, ut tincidunt arcu dui vitae urna. Curabitur eu tortor eget risus blandit ullamcorper. Etiam enim arcu, rhoncus a lorem sed, venenatis malesuada nibh. Maecenas et turpis nulla. Curabitur posuere laoreet posuere. Fusce rhoncus lectus quis ullamcorper interdum. Aenean finibus pretium massa vitae dictum.</p>
-        <p>Etiam vel massa orci. Integer id convallis turpis, vel feugiat quam. Ut pretium semper mauris, vitae eleifend mi pharetra vitae. Aliquam erat volutpat. Sed condimentum libero dolor, vitae semper quam dignissim sed. Nunc efficitur erat a urna interdum, ac tristique mauris dignissim. Maecenas vehicula semper enim, eu placerat ipsum posuere at. Sed eget dui in ante egestas varius at ut ligula. Fusce aliquam tortor feugiat, molestie velit id, sollicitudin urna.</p>
+<!-- Carousel Section -->
+<section class="carousel-section">
+    <div id="homeCarousel" class="carousel slide" data-bs-ride="carousel">
+        <!-- Carousel Indicators -->
+        <div class="carousel-indicators">
+            <button type="button" data-bs-target="#homeCarousel" data-bs-slide-to="0" class="active" aria-current="true"
+                    aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#homeCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#homeCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+        </div>
+
+        <!-- Carousel Items -->
+        <div class="carousel-inner">
+            <!-- First Slide -->
+            <div class="carousel-item active">
+                <img src="{% static 'main/img/house.jpg' %}" class="d-block w-100" alt="Modern House" ,
+                     style="height: 600px; object-fit: cover;">
+                <div class="carousel-caption d-none d-md-block">
+                    <h2>Beautiful Modern Homes</h2>
+                    <p>Discover properties that combine Scandinavian design with practical comfort</p>
+                    <button type="button" class="btn btn-primary">View Properties</button>
+                </div>
+            </div>
+
+            <!-- Second Slide -->
+            <div class="carousel-item">
+                <img src="{% static 'main/img/interior.jpg' %}" class="d-block w-100" alt="Slick Interior Desing" ,
+                     style="height: 600px; object-fit: cover;">
+                <div class="carousel-caption d-none d-md-block">
+                    <h2>Interior Design Excellence</h2>
+                    <p>Transform your space with our Scandinavian-inspired design services</p>
+                    <button type="button" class="btn btn-primary">Explore Designs</button>
+                </div>
+            </div>
+
+            <!-- Third Slide -->
+            <div class="carousel-item">
+                <img src="{% static 'main/img/agent.jpg' %}" class="d-block w-100" alt="Slick Interior Desing" ,
+                     style="height: 600px; object-fit: cover;">
+                <div class="carousel-caption d-none d-md-block">
+                    <h2>Personal Consultation</h2>
+                    <p>Work with dedicated agents who understand your needs</p>
+                    <button type="button" class="btn btn-primary">Meet Our Team</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Carousel Controls -->
+        <button class="carousel-control-prev" type="button" data-bs-target="#homeCarousel" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#homeCarousel" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
     </div>
+</section>
 
-    <button class="btn btn-warning">Go to about us page</button>
+<!-- Hero Section -->
+<section class="bg-dark text-white py-5 text-center">
+    <div class="container">
+        <h1 class="display-4 fw-bold">Find the place where you'll love living</h1>
+        <p class="lead mb-4">Your Comfort - Our Priority</p>
+        <div class="d-grid gap-2 d-sm-flex justify-content-sm-center">
+            <button type="button" class="btn btn-primary btn-lg px-4 gap-3">Explore Properties</button>
+            <button type="button" class="btn btn-outline-light btn-lg px-4">Learn More</button>
+        </div>
+    </div>
+</section>
 
-    {% include 'main/test.html' %}
+<!-- About Section -->
+<section class="py-5">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 mx-auto text-center">
+                <h2 class="fw-light">About BOFINN</h2>
+                <p class="lead">
+                    BOFINN combines the Swedish words "bo" (to live) and "finna" (to find), reflecting our mission to
+                    help you find the perfect place to live. We are inspired by Scandinavian philosophy, where
+                    simplicity, functionality, and warmth create a harmonious space for every family.
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Services Section -->
+<section class="py-5 bg-light">
+    <div class="container">
+        <h2 class="text-center mb-5">Our Services</h2>
+        <div class="row g-4">
+            <div class="col-md-4">
+                <div class="card h-100">
+                    <div class="card-body">
+                        <h3 class="card-title h5">Modern, Family-Friendly Properties</h3>
+                        <p class="card-text">
+                            We offer beautifully designed homes that blend contemporary aesthetics with practical
+                            layouts. Our properties are tailored for various family sizes, ensuring comfort and space
+                            for building connections.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card h-100">
+                    <div class="card-body">
+                        <h3 class="card-title h5">Interior Design Services</h3>
+                        <p class="card-text">
+                            We create personalized, minimalist designs inspired by Scandinavian aesthetics. Our
+                            solutions are practical yet beautiful, enhancing the coziness and functionality of your
+                            home.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card h-100">
+                    <div class="card-body">
+                        <h3 class="card-title h5">Personal Consultations</h3>
+                        <p class="card-text">
+                            At BOFINN, every client works with a dedicated agent who becomes a trusted advisor. We
+                            listen, understand, and guide you towards your ideal home, offering customized advice every
+                            step of the way.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Why Choose Us Section -->
+<section class="py-5">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-lg-6">
+                <h2>Why BOFINN?</h2>
+                <ul class="list-unstyled mt-3">
+                    <li class="mb-2">✓ Scandinavian philosophy: simplicity, functionality, warmth</li>
+                    <li class="mb-2">✓ Personalized approach to every client</li>
+                    <li class="mb-2">✓ Comprehensive service: from property selection to interior design</li>
+                    <li class="mb-2">✓ Experienced consultants who become your friends</li>
+                </ul>
+            </div>
+            <div class="col-lg-6">
+                <img src="{% static 'main/img/decor-hero.jpg' %}" class="d-block w-100" alt="Slick Interior Desing">
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Quick Links Section -->
+<section class="py-5 bg-light">
+    <div class="container">
+        <h2 class="text-center mb-4">Quick Links</h2>
+        <div class="row g-4">
+            <div class="col-md-3">
+                <div class="d-grid">
+                    <a href="#" class="btn btn-outline-primary">View our latest properties</a>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="d-grid">
+                    <a href="#" class="btn btn-outline-primary">Schedule a consultation</a>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="d-grid">
+                    <a href="#" class="btn btn-outline-primary">Discover our interior design projects</a>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="d-grid">
+                    <a href="#" class="btn btn-outline-primary">Meet our team</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Bootstrap JS Bundle with Popper -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+
+
+{% include 'main/test.html' %}
 {% endblock %}
