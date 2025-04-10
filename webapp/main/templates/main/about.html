@@ -3,11 +3,148 @@
 {% block title%}About us{% endblock %}
 
 {% block content%}
-    <div class="features">
-        <h1>About us</h1>
-        <p>Lorem ipsum dolor sit amet</p>
-        <button class="btn btn-success">Dangerous button</button>
-    </div>
 
+<!-- Nagłówek -->
+  <section class="hero text-center">
+    <div class="container">
+      <h1 class="display-4 fw-bold">O nas</h1>
+      <p class="lead">Zainspirowani szwedzkim stylem życia. Tworzymy przestrzenie, do których chce się wracać.</p>
+      <img src="https://source.unsplash.com/800x300/?scandinavian,interior" alt="Skandynawski styl" class="img-fluid rounded mt-4 shadow-sm">
+    </div>
+  </section>
+
+  <!-- Historia -->
+  <section class="container my-5">
+    <div class="row align-items-center">
+      <div class="col-md-6">
+        <img src="https://source.unsplash.com/600x400/?home,nature" alt="Historia BOFINN" class="section-img">
+      </div>
+      <div class="col-md-6">
+        <h2>Historia BOFINN</h2>
+        <p>
+          BOFINN narodziło się z potrzeby stworzenia przestrzeni, w których naprawdę chce się żyć.
+            Inspiracją była nasza wspólna podróż <s>do Ikei</s> do Szwecji, gdzie zakochaliśmy się w tamtejszym podejściu do życia—
+          pełnym równowagi, bliskości natury i troski o codzienny komfort.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Misja -->
+  <section class="container my-5">
+    <div class="row align-items-center">
+      <div class="col-md-6 order-md-2">
+        <img src="https://source.unsplash.com/600x400/?minimalism,living-room" alt="Misja BOFINN" class="section-img">
+      </div>
+      <div class="col-md-6">
+        <h2>Nasza misja</h2>
+        <blockquote class="blockquote">
+          <p>
+            W BOFINN wierzymy, że dom to coś więcej niż cztery ściany—
+            powinien być miejscem, które sprzyja relacjom, wycisza po intensywnym dniu i daje przestrzeń do rozwoju.
+            Naszą misją jest łączenie <strong>prostoty</strong>, <strong>funkcjonalności</strong> i <strong>ciepła</strong>.
+          </p>
+        </blockquote>
+      </div>
+    </div>
+  </section>
+
+  <!-- Znaczenie nazwy -->
+  <section class="container my-5 text-center">
+    <h2>Skąd nazwa BOFINN?</h2>
+    <p>
+      Nasza nazwa to połączenie dwóch szwedzkich słów:
+      <span class="badge bg-primary">bo</span> (<em>mieszkać</em>) oraz
+      <span class="badge bg-primary">finna</span> (<em>znaleźć</em>).
+    </p>
+    <img src="https://source.unsplash.com/600x200/?nordic,home" alt="Znaczenie nazwy" class="img-fluid rounded shadow-sm mt-3">
+  </section>
+
+  <!-- Wartości -->
+  <section class="container my-5">
+    <h2 class="text-center mb-4">Nasze wartości</h2>
+    <div class="row text-center">
+      <div class="col-md-3 mb-3">
+        <div class="card border-0 shadow-sm py-4">
+          <div class="card-body">
+            <i class="bi bi-sliders2 value-icon mb-2"></i>
+            <h5 class="card-title">Prostota</h5>
+            <p>Mniej znaczy więcej.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-3 mb-3">
+        <div class="card border-0 shadow-sm py-4">
+          <div class="card-body">
+            <i class="bi bi-brush value-icon mb-2"></i>
+            <h5 class="card-title">Piękno</h5>
+            <p>Dbałość o estetykę i detale.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-3 mb-3">
+        <div class="card border-0 shadow-sm py-4">
+          <div class="card-body">
+            <i class="bi bi-house-heart value-icon mb-2"></i>
+            <h5 class="card-title">Komfort</h5>
+            <p>Przestrzeń, w której chce się być.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-3 mb-3">
+        <div class="card border-0 shadow-sm py-4">
+          <div class="card-body">
+            <i class="bi bi-person-hearts value-icon mb-2"></i>
+            <h5 class="card-title">Autentyczność</h5>
+            <p>Rozwiązania dopasowane do Ciebie.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Zespół -->
+  <section class="container my-5">
+    <h2 class="text-center mb-4">Nasz zespół</h2>
+    <div class="row text-center">
+      <div class="col-md-4 mb-4">
+        <div class="card border-0 shadow-sm h-100 p-3">
+          <img src="ania.jpg" alt="Ania" class="team-img mx-auto mt-3">
+          <div class="card-body">
+            <h5 class="card-title">Ania</h5>
+            <p class="card-text">Specjalistka od wnętrz – tworzy przytulne i estetyczne przestrzenie.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4 mb-4">
+        <div class="card border-0 shadow-sm h-100 p-3">
+          <img src="asia.jpg" alt="Asia" class="team-img mx-auto mt-3">
+          <div class="card-body">
+            <h5 class="card-title">Vika</h5>
+            <p class="card-text">Konsultantka z sercem – pomaga w każdej decyzji z empatią i doświadczeniem.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4 mb-4">
+        <div class="card border-0 shadow-sm h-100 p-3">
+          <img src="maciek.jpg" alt="Maciek" class="team-img mx-auto mt-3">
+          <div class="card-body">
+            <h5 class="card-title">Krzysiek</h5>
+            <p class="card-text">Ekspert od nieruchomości – zna rynek jak własną kieszeń.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="container text-center my-5">
+    <div class="alert alert-primary shadow-sm p-4" role="alert">
+      Gotowi znaleźć swój wymarzony dom?
+      <a href="/kontakt" class="btn btn-primary btn-lg ms-3">Skontaktuj się z nami</a>
+    </div>
+  </section>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 
 {% endblock %}
