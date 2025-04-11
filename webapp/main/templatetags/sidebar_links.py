@@ -9,10 +9,6 @@ def get_links():
         'href': '/',
         'icon': 'fa-house',
     }, {
-        'name': 'Cars',
-        'href': '/cars',
-        'icon': 'fa-car',
-    }, {
         'name': 'Contact',
         'href': '/contact',
         'icon': 'fa-paper-plane',
@@ -25,9 +21,9 @@ def get_links():
         'href': '/news/',
         'icon': 'fa-newspaper',
     },{
-        'name': 'Add news',
-        'href': '/news/create',
-        'icon': 'fa-plus',
+        'name': 'Properties',
+        'href': '/properties',
+        'icon': 'fa-building'
     },{
         'name': 'Forum',
         'href': '/forum',
