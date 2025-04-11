@@ -6,3 +6,4 @@ urlpatterns = [
     path('frequent_questions', views.frequent_questions)
 ]
  
+ 

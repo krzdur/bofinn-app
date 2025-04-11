@@ -1,0 +1,39 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load static %}
+    <meta charset="UTF-8">
+    <title>Properties - BOFINN</title>
+    <link rel="stylesheet" href="{% static 'main/css/properties.css' %}">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+    <div class="properties-container">
+        <h1>Discover Our Homes</h1>
+        <p class="subtitle">Handpicked for comfort, style, and family living.</p>
+
+        <div class="property-grid">
+            <div class="property-card">
+                <img src="{% static 'main/images/house1.jpg' %}" alt="Modern Family Home">
+                <div class="property-info">
+                    <h2>Modern Family Home</h2>
+                    <p>3 beds · 2 baths · 140m²</p>
+                    <span class="price">$320,000</span>
+                </div>
+            </div>
+
+            <div class="property-card">
+                <img src="{% static 'main/images/house2.jpg' %}" alt="Scandinavian Apartment">
+                <div class="property-info">
+                    <h2>Scandinavian Apartment</h2>
+                    <p>2 beds · 1 bath · 90m²</p>
+                    <span class="price">$250,000</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+
