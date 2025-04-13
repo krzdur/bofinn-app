@@ -2,6 +2,8 @@ from django import template
 
 register = template.Library();
 
+#look for your icon here https://fontawesome.com/search?ic=free
+
 @register.simple_tag
 def get_links():
     return [{
@@ -9,9 +11,9 @@ def get_links():
         'href': '/',
         'icon': 'fa-house',
     }, {
-        'name': 'Cars',
-        'href': '/cars',
-        'icon': 'fa-car',
+        'name': 'Properties',
+        'href': '/properties',
+        'icon': 'fa-house-lock',
     }, {
         'name': 'Contact',
         'href': '/contact',
@@ -20,17 +22,5 @@ def get_links():
         'name': 'About',
         'href': '/about',
         'icon': 'fa-address-card',
-    },{
-        'name': 'News',
-        'href': '/news/',
-        'icon': 'fa-newspaper',
-    },{
-        'name': 'Add news',
-        'href': '/news/create',
-        'icon': 'fa-plus',
-    },{
-        'name': 'Forum',
-        'href': '/forum',
-        'icon': 'fa-comment', #look for your icon here https://fontawesome.com/search?ic=free
     }]
     
