@@ -1,8 +1,8 @@
 from django import template
 
-register = template.Library()
+register = template.Library();
 
-# Look for your icon here: https://fontawesome.com/search?ic=free
+#look for your icon here https://fontawesome.com/search?ic=free
 
 @register.simple_tag
 def get_links():
@@ -11,10 +11,13 @@ def get_links():
         'href': '/',
         'icon': 'fa-house',
     }, {
+<<<<<<< HEAD
+=======
         'name': 'Properties',
         'href': '/properties',
         'icon': 'fa-house-lock',
     }, {
+>>>>>>> b27142df4413c2b3d9b571ebc44c26e4fe660733
         'name': 'Contact',
         'href': '/contact',
         'icon': 'fa-paper-plane',
@@ -22,12 +25,20 @@ def get_links():
         'name': 'About',
         'href': '/about',
         'icon': 'fa-address-card',
-    }, {
+<<<<<<< HEAD
+    },{
         'name': 'News',
         'href': '/news/',
         'icon': 'fa-newspaper',
-    }, {
+    },{
+        'name': 'Properties',
+        'href': '/properties',
+        'icon': 'fa-building'
+    },{
         'name': 'Forum',
         'href': '/forum',
-        'icon': 'fa-comment',  # look for your icon here: https://fontawesome.com/search?ic=free
+        'icon': 'fa-comment', #look for your icon here https://fontawesome.com/search?ic=free
+=======
+>>>>>>> b27142df4413c2b3d9b571ebc44c26e4fe660733
     }]
+    
