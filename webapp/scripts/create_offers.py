@@ -36,7 +36,7 @@ def create_sample_offers():
 
 <p><em><strong>Live bold. Live refined. Live loft.</strong></em></p>
             """,
-            image='modern-loft.jpeg',
+            image='img/modern-loft1.jpeg',
             slug="modern-loft"
         ),
         Offer(
@@ -46,6 +46,7 @@ def create_sample_offers():
             area=150,
             price=1450000.00,
             description="Perfect house for a family.",
+            image='img/family-house1.jpg',
             slug="family-house"
         ),
         Offer(
@@ -55,6 +56,7 @@ def create_sample_offers():
             area=280,
             price=4500000.00,
             description="Perfect house for a family.",
+            image='img/modern-family-home1.jpg',
             slug="modern-family-house"
         ),
         Offer(
