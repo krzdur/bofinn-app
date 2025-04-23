@@ -1,13 +1,16 @@
 import os
+import sys
 import django
+
+
+project_root = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))  # Adjust as needed
+sys.path.insert(0, project_root)
 
 # Set up Django environment
 os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'webapp.settings')
 django.setup()
 
-# Now import your models
 from properties.models import Offer
-
 
 def create_sample_offers():
     # clear existing
