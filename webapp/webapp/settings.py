@@ -41,7 +41,6 @@ INSTALLED_APPS = [
 
     # custom apps
     'main',
-    'news',
     'forum',
     'properties'
 ]
