@@ -18,13 +18,13 @@ def create_sample_offers():
 
     offers = [
         Offer(
-            name="Modern Loft",
-            beds_count=1,
-            baths_count=1,
-            area=50,
-            price=650000.00,
+            name="Modern Family Home",
+            beds_count=3,
+            baths_count=2,
+            area=150,
+            price=1450000.00,
             description="""
-<h2>Urban Elegance Meets Industrial Chic</h2>
+            <h2>Urban Elegance Meets Industrial Chic</h2>
 <p>
   Step into <strong>The Foundry Loft</strong> — a striking blend of modern minimalism and historic character nestled in the heart of the city.
   With soaring <strong>14-foot ceilings</strong>, exposed brick walls, and floor-to-ceiling windows that flood the space with natural light,
@@ -39,64 +39,89 @@ def create_sample_offers():
 
 <p><em><strong>Live bold. Live refined. Live loft.</strong></em></p>
             """,
-            image='img/modern-loft1.jpeg',
-            slug="modern-loft"
+            image='img/house2.jpg',
+            slug="modern-family-home"
         ),
         Offer(
-            name="Family House",
-            beds_count=3,
-            baths_count=2,
-            area=150,
-            price=1450000.00,
-            description="Perfect house for a family.",
-            image='img/family-house1.jpg',
-            slug="family-house"
-        ),
-        Offer(
-            name="Modern Family Home",
-            beds_count=3,
-            baths_count=2,
-            area=280,
-            price=4500000.00,
-            description="Perfect house for a family.",
-            image='img/modern-family-home1.jpg',
-            slug="modern-family-house"
-        ),
-        Offer(
-            name="Modern Apartment",
+            name="Scandinavian Apartment",
             beds_count=2,
             baths_count=1,
-            area=80,
-            price=350000.00,
-            description="Stylish city apartment with a great view.",
-            slug="modern-apartment"
+            area=90,
+            price=250000.00,
+            description="""
+            <h2>Scandinavian Serenity Meets Sleek Sophistication</h2>
+<p>
+  Welcome to <strong>The Nord Haus</strong> — a luminous retreat where clean lines, natural textures, and timeless design create an atmosphere of effortless calm.
+  Bathed in soft, golden light through <strong>panoramic windows</strong>, this elegant space embraces the essence of Scandinavian living with its open floor plan,
+  pale oak floors, and curated minimalist details.
+</p>
+
+<p>
+  Whether you're gathering for a cozy dinner under a modern glass chandelier or savoring a quiet morning by the fireplace nook,
+  every inch of <strong>The Nord Haus</strong> feels intentional and inspiring. Featuring a <strong>bespoke kitchen</strong> with marble accents,
+  an <em>organic spa bathroom</em> with heated floors, and integrated smart features, this apartment isn’t just a place to live — it’s a sanctuary.
+</p>
+
+<p><em><strong>Live light. Live pure. Live Nord.</strong></em></p>
+
+            """,
+            image='img/house1.jpg',
+            slug="scandinavian-apartment"
         ),
         Offer(
-            name="Luxury Villa",
+            name="Cozy Country House",
+            beds_count=2,
+            baths_count=1,
+            area=200,
+            price=410000.00,
+            description="""
+            <h2>Rustic Charm Meets Modern Comfort</h2>
+<p>
+  Welcome to <strong>The Willow Cottage</strong> — a warm embrace of countryside beauty and contemporary ease tucked away in rolling meadows.
+  With <strong>vaulted beam ceilings</strong>, wide-plank wood floors, and sun-dappled rooms framed by charming French doors,
+  every detail invites you to slow down and savor the simple joys of home.
+</p>
+
+<p>
+  Whether you're sharing stories by the stone fireplace or enjoying a lazy afternoon on the wraparound porch,
+  <strong>The Willow Cottage</strong> is made for moments that linger. Featuring a <strong>gourmet farmhouse kitchen</strong> with butcher block counters,
+  an <em>artisan-crafted bathroom</em> with a vintage clawfoot tub, and thoughtful modern updates throughout, this home is where nostalgia meets now.
+</p>
+
+<p><em><strong>Live warmly. Live simply. Live country.</strong></em></p>
+            """,
+            image='img/country-house.jpg',
+            slug="cozy-country-house"
+        ),
+        Offer(
+            name="Minimalist Villa",
             beds_count=5,
             baths_count=4,
             area=300,
-            price=3200000.00,
+            price=680000.00,
             description="Exquisite villa with private pool and garden.",
-            slug="luxury-villa"
+            image='img/decor-hero.jpg',
+            slug="minimalist-villa"
         ),
         Offer(
-            name="City Apartment",
+            name="Urban Loft",
             beds_count=2,
-            baths_count=1,
-            area=75,
-            price=850000.00,
+            baths_count=2,
+            area=110,
+            price=290000.00,
             description="Stylish apartment in the heart of the city.",
-            slug="city-apartment"
+            image='img/house.jpg',
+            slug="urban-loft"
         ),
         Offer(
-            name="Luxury Villa",
+            name="Elegant Penthouse",
             beds_count=5,
             baths_count=4,
             area=300,
-            price=3200000.00,
+            price=540000.00,
             description="Spacious villa with private pool and garden.",
-            slug="luxury-villa"
+            image='img/modern-loft1.jpeg',
+            slug="elegant-penthouse"
         ),
         Offer(
             name="Cozy Studio",
@@ -115,15 +140,6 @@ def create_sample_offers():
             price=950000.00,
             description="Charming cottage located in a quiet suburban area.",
             slug="suburban-cottage"
-        ),
-        Offer(
-            name="Penthouse Suite",
-            beds_count=3,
-            baths_count=3,
-            area=200,
-            price=2500000.00,
-            description="Exclusive penthouse with panoramic city views.",
-            slug="penthouse-suite"
         )
     ]
 
