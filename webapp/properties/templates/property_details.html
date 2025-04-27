@@ -1,0 +1,16 @@
+{% extends 'main/layout/layout.html' %}
+{% load static %}
+
+{% block title%}About us{% endblock %}
+
+{% block content %}
+
+<h1>{{ property.name }}</h1>
+<p>{{ property.description|safe }}</p>
+{% if property.image %}
+    <img src="{{ property.image.url }}" alt="{{ property.name }}" width="900">
+{% else %}
+    <img src="{% static 'main/img/house.jpg' %}" alt="{{ property.name }}" width="900">
+{% endif %}
+
+{% endblock %}

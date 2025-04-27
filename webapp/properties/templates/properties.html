@@ -1,0 +1,49 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Properties - BOFINN</title>
+    <link rel="stylesheet" href="{% static 'main/css/properties.css' %}">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+    <div class="properties-container">
+        <h1>Discover Our Homes</h1>
+        <p class="subtitle">Handpicked for comfort, style, and family living.</p>
+
+        <div class="property-grid">
+
+            {% if properties %}
+
+                {% for property in properties %}
+                <a href="{{ property.slug }}" class="property-card-link">
+                    <div class="property-card">
+                        {% if property.image %}
+                        <img src="{{ property.image.url }}" alt="{{ property.name }}">
+                        {% else %}
+                        <img src="{% static 'properties/house0.svg' %}" alt="{{ property.name }}">
+                        {% endif %}
+                        <div class="property-info">
+                            <h2>{{ property.name }}</h2>
+                            <p>{{ property.beds_count }} beds · {{ property.baths_count }} baths · {{ property.area }}m²</p>
+                            <span class="price">${{ property.price|floatformat:0 }}</span>
+                        </div>
+                    </div>
+                </a>
+
+                {% endfor %}
+
+            {% else %}
+            <div>
+                <h2>Currently, all of our homes are sold. Please, come back later!</h2>
+            </div>
+            {% endif %}
+
+        </div>
+    </div>
+
+</body>
+</html>
+
