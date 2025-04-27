@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Interior Design</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Helvetica Neue', sans-serif;
+            background-color: #f2f2f2;
+            color: #333;
+        }
+        header {
+            background-color: #2e3d35;
+            padding: 20px 0;
+            text-align: center;
+        }
+        header h1 {
+            color: #fff;
+            margin: 0;
+            font-size: 2.5em;
+        }
+        .slider {
+            position: relative;
+            overflow: hidden;
+            max-width: 1000px;
+            margin: 40px auto;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+        }
+        .slides {
+            display: flex;
+            transition: transform 0.5s ease-in-out;
+            width: 500%;
+        }
+        .slides img {
+            width: 100%;
+            height: 500px;
+            object-fit: cover;
+        }
+        .navigation {
+            position: absolute;
+            width: 100%;
+            top: 50%;
+            display: flex;
+            justify-content: space-between;
+            transform: translateY(-50%);
+        }
+        .navigation button {
+            background: rgba(46, 61, 53, 0.7); 
+            border: none;
+            color: #fff;
+            font-size: 2em;
+            padding: 10px 20px;
+            cursor: pointer;
+            border-radius: 50%;
+            margin: 0 10px;
+            transition: background 0.3s;
+        }
+        .navigation button:hover {
+            background: rgba(46, 61, 53, 0.9);
+        }
+        .contact-section {
+            background-color: #5c4033;
+            text-align: center;
+            padding: 50px 20px;
+            margin-top: 50px;
+        }
+        .contact-section h2 {
+            color: #fff;
+            margin-bottom: 20px;
+        }
+        .contact-button {
+            background-color: #2e3d35;
+            color: white;
+            border: none;
+            padding: 15px 30px;
+            font-size: 1em;
+            border-radius: 30px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            text-decoration: none;
+        }
+        .contact-button:hover {
+            background-color: #3f5c4d;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Our Interior Designs</h1>
+</header>
+
+<section class="slider">
+    <div class="slides" id="slides">
+        <img src="#" alt="Project 1">
+        <img src="#" alt="Project 2">
+        <img src="#" alt="Project 3">
+        <img src="#" alt="Project 4">
+        <img src="#" alt="Project 5">
+    </div>
+    <div class="navigation">
+        <button id="prev">&#10094;</button>
+        <button id="next">&#10095;</button>
+    </div>
+</section>
+
+<section class="contact-section">
+    <h2>Let's Create Your Dream Space</h2>
+    <a href="/contact/" class="contact-button">Contact Us</a>
+</section>
+
+<script>
+    const slides = document.getElementById('slides');
+    const totalSlides = slides.children.length;
+    let index = 0;
+
+    document.getElementById('next').addEventListener('click', () => {
+        index = (index + 1) % totalSlides;
+        updateSlide();
+    });
+
+    document.getElementById('prev').addEventListener('click', () => {
+        index = (index - 1 + totalSlides) % totalSlides;
+        updateSlide();
+    });
+
+    function updateSlide() {
+        slides.style.transform = `translateX(-${index * 100}%)`;
+    }
+
+    
+    setInterval(() => {
+        index = (index + 1) % totalSlides;
+        updateSlide();
+    }, 5000);
+</script>
+
+</body>
+</html>
