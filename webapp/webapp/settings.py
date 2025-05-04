@@ -136,3 +136,6 @@ MEDIA_ROOT = BASE_DIR / 'properties/media/'
 # https://docs.djangoproject.com/en/5.1/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+# Email backend set to stdout
+EMAIL_BACKEND = "django.core.mail.backends.console.EmailBackend"
