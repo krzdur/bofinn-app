@@ -13,15 +13,13 @@
     <div class="contact-container">
         <h1>Contact Us</h1>
         <p>Let’s get in touch! Fill in the form below and we’ll get back to you as soon as possible.</p>
-        
-        <form method="post">
+
+        <form method="post" action="thankyou">
             {% csrf_token %}
-            <input type="text" name="name" placeholder="Your Name" required>
-            <input type="email" name="email" placeholder="Your Email" required>
-            <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
+
+            {{ form.as_p }}
             <button type="submit">Send Message</button>
         </form>
     </div>
 </body>
 </html>
-
