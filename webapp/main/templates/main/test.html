@@ -1,1 +1,97 @@
-<p>Work in progress...</p>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Contact Modal Test</title>
+  <style>
+    /* MODAL BACKGROUND */
+    .modal {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      height: 100vh;
+      width: 100vw;
+      background: rgba(0, 0, 0, 0.5);
+      z-index: 9999;
+      justify-content: center;
+      align-items: center;
+    }
+
+    /* MODAL CONTENT */
+    .modal-content {
+      background: #fff;
+      padding: 30px;
+      border-radius: 12px;
+      max-width: 500px;
+      width: 90%;
+      position: relative;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    }
+
+    /* CLOSE BUTTON */
+    .close {
+      position: absolute;
+      top: 10px;
+      right: 15px;
+      font-size: 24px;
+      cursor: pointer;
+    }
+
+    input, textarea, button {
+      display: block;
+      width: 100%;
+      margin-bottom: 10px;
+      padding: 8px;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- MODAL STRUCTURE -->
+  <div id="contactModal" class="modal">
+    <div class="modal-content">
+      <span class="close" id="closeModalBtn">&times;</span>
+      <h2>Contact BOFINN</h2>
+      <form onsubmit="event.preventDefault(); alert('Message sent!'); closePopup();">
+        <label for="name">Your Name</label>
+        <input type="text" id="name" placeholder="e.g. Anna Eriksson" required>
+
+        <label for="email">Email</label>
+        <input type="email" id="email" placeholder="you@example.com" required>
+
+        <label for="message">Message</label>
+        <textarea id="message" placeholder="How can we help you?" required></textarea>
+
+        <button type="submit">Send Message</button>
+      </form>
+    </div>
+  </div>
+
+  <!-- MODAL SCRIPT -->
+  <script>
+    function closePopup() {
+      document.getElementById("contactModal").style.display = "none";
+    }
+
+    window.onload = function () {
+      setTimeout(() => {
+        document.getElementById("contactModal").style.display = "flex";
+      }, 3000);
+
+      document.getElementById("closeModalBtn").onclick = closePopup;
+
+      window.onclick = function (event) {
+        const modal = document.getElementById("contactModal");
+        if (event.target === modal) {
+          closePopup();
+        }
+      };
+    };
+  </script>
+
+</body>
+</html>
+
+
