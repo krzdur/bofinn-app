@@ -1,0 +1,28 @@
+{% load static %}
+
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load static %}
+    <meta charset="UTF-8">
+    <title>Contact Us - BOFINN</title>
+    <link rel="stylesheet" href="{% static 'main/css/contact.css' %}">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+    <div class="contact-container">
+        <h1>Contact Us</h1>
+        <p>Let’s get in touch! Fill in the form below and we’ll get back to you as soon as possible.</p>
+        
+        <form method="post">
+            {% csrf_token %}
+            <input type="text" name="name" placeholder="Your Name" required>
+            <input type="email" name="email" placeholder="Your Email" required>
+            <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
+            <button type="submit">Send Message</button>
+        </form>
+    </div>
+</body>
+</html>
