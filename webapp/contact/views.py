@@ -1,3 +1,5 @@
+from urllib.parse import urlparse
+
 from django.core.mail import send_mail
 from django.shortcuts import render, redirect
 from django.template.loader import render_to_string
@@ -26,15 +28,25 @@ def contact(request):
                 recipient_list=['contact@boffin.com'],
                 html_message=message
             )
-
-            return redirect('thankyou')
+            referer = request.META.get('HTTP_REFERER', '/')
+            return redirect(f"{referer}?contact_success=1#contactModal")
+        else:
+            context = {
+                'form': form,
+                'show_modal': True,
+            }
+            return render(request, get_template_from_referer(request), context)
 
     else:
-        form = ContactForm()
+        return render(request, get_template_from_referer(request))
 
-
-    return render(request, 'contact.html', {'form': form})
-
+def get_template_from_referer(request):
+    referrer = request.META.get('HTTP_REFERER', '')
+    referrer_path = urlparse(referrer).path.strip('/')
+    if referrer_path and referrer_path != 'contact':
+        return f'main/{referrer_path}.html'
+    else:
+        return 'main/index.html'
 
 def thankyou(request):
     return render(request, 'thankyou.html')
