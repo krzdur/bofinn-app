@@ -1,5 +1,6 @@
 from django.shortcuts import render
-from django.views.generic import DetailView
+from django.views.generic import DetailView, CreateView
+from django.utils.text import slugify
 
 from .models import Offer
 
@@ -13,3 +14,14 @@ class OfferDetailView(DetailView):
     model = Offer
     template_name = 'property_details.html'
     context_object_name = 'property'
+
+
+class OfferCreateView(CreateView):
+    model = Offer
+    fields = ['name', 'beds_count', 'baths_count', 'area', 'price', 'image', 'description']
+    template_name = 'offer_form.html'
+
+    def form_valid(self, form):
+        # Auto-generate slug from name
+        form.instance.slug = slugify(form.instance.name)
+        return super().form_valid(form)
