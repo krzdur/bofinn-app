@@ -1,3 +1,5 @@
+{% load static %}
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -158,10 +160,10 @@
 </section>
 
 <section id="projects" class="projects">
-    <img src="img/kitchen.jpg" alt="Kitchen Design">
-    <img src="img/tabletable.jpg" alt="Kitchen Area Design">
-    <img src="img/bath.jpg" alt="Bathroom Design">
-    <img src="img/living.jpg" alt="Living Room Design">
+    <img src="{% static 'main/img/kitchen.jpg' %}" alt="Kitchen Design">
+    <img src="{% static 'main/img/tabletable.jpg' %}" alt="Kitchen Area Design">
+    <img src="{% static 'main/img/bath.jpg' %}" alt="Bathroom Design">
+    <img src="{% static 'main/img/living.jpg' %}" alt="Living Room Design">
 </section>
 
 <section class="testimonial">
