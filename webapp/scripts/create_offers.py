@@ -122,24 +122,6 @@ def create_sample_offers():
             description="Spacious villa with private pool and garden.",
             image='img/modern-loft1.jpeg',
             slug="elegant-penthouse"
-        ),
-        Offer(
-            name="Cozy Studio",
-            beds_count=1,
-            baths_count=1,
-            area=30,
-            price=350000.00,
-            description="Compact studio ideal for city living.",
-            slug="cozy-studio"
-        ),
-        Offer(
-            name="Suburban Cottage",
-            beds_count=2,
-            baths_count=1,
-            area=90,
-            price=950000.00,
-            description="Charming cottage located in a quiet suburban area.",
-            slug="suburban-cottage"
         )
     ]
 
