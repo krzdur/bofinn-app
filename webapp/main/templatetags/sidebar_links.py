@@ -23,9 +23,9 @@ def get_links():
         'name': 'About',
         'href': '/about',
         'icon': 'fa-address-card'
-    },
-
-        {'name': 'Interior Design',
-         'href': '/interior',
-         'icon': 'fa-solid fa-landmark'
-         }]
+    }, {
+        'name': 'Interior Design',
+        'href': '/interior',
+        'icon': 'fa-solid fa-landmark'
+    }
+    ]
