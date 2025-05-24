@@ -1,3 +1,5 @@
+{% load static %}
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -158,10 +160,10 @@
 </section>
 
 <section id="projects" class="projects">
-    <img src="https://via.placeholder.com/600x400?text=Project+1" alt="Project 1">
-    <img src="https://via.placeholder.com/600x400?text=Project+2" alt="Project 2">
-    <img src="https://via.placeholder.com/600x400?text=Project+3" alt="Project 3">
-    <img src="https://via.placeholder.com/600x400?text=Project+4" alt="Project 4">
+    <img src="{% static 'main/img/kitchen.jpg' %}" alt="Kitchen Design">
+    <img src="{% static 'main/img/tabletable.jpg' %}" alt="Kitchen Area Design">
+    <img src="{% static 'main/img/bath.jpg' %}" alt="Bathroom Design">
+    <img src="{% static 'main/img/living.jpg' %}" alt="Living Room Design">
 </section>
 
 <section class="testimonial">
