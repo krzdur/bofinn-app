@@ -15,11 +15,7 @@ def get_links():
         'name': 'Properties',
         'href': '/properties',
         'icon': 'fa-building'
-    }, {
-        'name': 'Contact',
-        'href': '/contact',
-        'icon': 'fa-paper-plane'
-    }, {
+    },  {
         'name': 'About',
         'href': '/about',
         'icon': 'fa-address-card'
