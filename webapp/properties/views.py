@@ -1,6 +1,7 @@
 from django.shortcuts import render
 from django.views.generic import DetailView, CreateView
 from django.utils.text import slugify
+from django.contrib.auth.mixins import LoginRequiredMixin
 
 from .models import Offer
 
@@ -16,7 +17,7 @@ class OfferDetailView(DetailView):
     context_object_name = 'property'
 
 
-class OfferCreateView(CreateView):
+class OfferCreateView(LoginRequiredMixin, CreateView):
     model = Offer
     fields = ['name', 'beds_count', 'baths_count', 'area', 'price', 'image', 'description']
     template_name = 'offer_form.html'
