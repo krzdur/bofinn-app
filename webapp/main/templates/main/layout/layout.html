@@ -31,6 +31,18 @@
     {% endblock %}
   </main>
 
+  <footer class="bg-light text-center text-muted py-3 mt-4 border-top">
+    <div class="container">
+      {% if user.is_authenticated %}
+        <a href="/properties/add" class="text-decoration-none me-3">New offer...</a>
+        <a href="{% url 'logout' %}" class="text-decoration-none me-3">Logout</a>
+      {% else %}
+        <a href="{% url 'login' %}" class="text-decoration-none me-3">Login</a>
+        <a href="{% url 'register_user' %}" class="text-decoration-none">Register</a>
+      {% endif %}
+    </div>
+  </footer>
+
   {% render_contact_modal %}
 </body>
 </html>
