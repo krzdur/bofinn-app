@@ -1,0 +1,18 @@
+{% extends 'main/layout/layout.html' %}
+
+{% block title %}Login{% endblock %}
+
+{% block content %}
+<div class="d-flex align-items-center justify-content-center px-4" style="min-height: 80vh">
+    <div style="max-width: 400px" class="w-100">
+        <h1 class="text-center mb-4">Sign In</h1>
+        <form method="POST">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <div class="d-grid">
+                <button type="submit" class="btn btn-primary">Sign In</button>
+            </div>
+        </form>
+    </div>
+</div>
+{% endblock %}
