@@ -99,7 +99,24 @@ def create_sample_offers():
             baths_count=4,
             area=300,
             price=680000.00,
-            description="Exquisite villa with private pool and garden.",
+            description="""
+<h2>Serene Living in Scandinavian Harmony</h2>
+<p>
+  Welcome to the <strong>Minimalist Villa</strong> — a tranquil retreat where clean architectural lines, soft textures,
+  and natural light come together in perfect balance. Surrounded by gentle greenery and designed with intentional simplicity,
+  this home invites you to slow down and reconnect.
+</p>
+<p>
+  Featuring <strong>open-concept living spaces</strong>, floor-to-ceiling windows, and a seamless indoor-outdoor flow,
+  the villa offers a sense of effortless spaciousness. A <strong>wood-accented kitchen</strong> with matte finishes,
+  <em>spa-like bathrooms</em>, and cozy reading nooks make it both functional and restorative.
+</p>
+<p>
+  Whether you're enjoying a morning coffee on the sun-washed patio or hosting intimate dinners under soft pendant lighting,
+  every corner whispers calm. <strong>Minimalist Villa</strong> is more than a place to live — it’s a space to breathe.
+</p>
+<p><em><strong>Live simply. Live fully. Live grounded.</strong></em></p>
+            """,
             image='img/decor-hero.jpg',
             slug="minimalist-villa"
         ),
@@ -109,7 +126,25 @@ def create_sample_offers():
             baths_count=2,
             area=110,
             price=290000.00,
-            description="Stylish apartment in the heart of the city.",
+            description="""
+<h2>Industrial Soul with City Sophistication</h2>
+<p>
+  Discover the bold charm of the <strong>Urban Loft</strong> — where exposed concrete, steel beams,
+  and natural textures meet downtown energy. Nestled in a reimagined factory building, this loft captures the raw
+  authenticity of urban living while offering refined, modern comfort.
+</p>
+<p>
+  Enjoy <strong>16-foot ceilings</strong>, massive industrial-style windows, and polished concrete floors.
+  The open floor plan boasts a <strong>designer kitchen</strong> with dark quartz countertops, a <em>glass-enclosed mezzanine bedroom</em>,
+  and smart lighting to set the mood for any moment.
+</p>
+<p>
+  Whether you’re crafting ideas in the work-from-home alcove or hosting friends in the dramatic living space,
+  the <strong>Urban Loft</strong> delivers inspiration at every turn.
+</p>
+<p><em><strong>Live raw. Live real. Live downtown.</strong></em></p>
+
+            """,
             image='img/house.jpg',
             slug="urban-loft"
         ),
@@ -119,7 +154,24 @@ def create_sample_offers():
             baths_count=4,
             area=300,
             price=540000.00,
-            description="Spacious villa with private pool and garden.",
+            description="""
+<h2>Skyline Living with Timeless Grace</h2>
+<p>
+  Introducing the <strong>Elegant Penthouse</strong> — a crown jewel of modern refinement perched high above the city.
+  With expansive terraces, panoramic skyline views, and sophisticated finishes throughout, this is high-rise living at its most graceful.
+</p>
+<p>
+  Step into a <strong>sun-drenched great room</strong> with marble floors, custom built-ins, and French doors that open
+  to a private rooftop oasis. The <strong>chef’s kitchen</strong> features integrated appliances and golden brass fixtures,
+  while the <em>primary suite</em> includes a walk-in dressing room and a deep soaking tub framed by city lights.
+</p>
+<p>
+  Ideal for elegant entertaining or serene solitude, the <strong>Elegant Penthouse</strong> is a space where luxury and
+  tranquility live side by side.
+</p>
+<p><em><strong>Live elevated. Live refined. Live above it all.</strong></em></p>
+
+            """,
             image='img/modern-loft1.jpeg',
             slug="elegant-penthouse"
         )
