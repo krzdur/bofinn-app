@@ -1,25 +1,34 @@
-# Django blueprint app
-PyCharm will prepare the virtual environment for project automatically. For non-PyCharm users (for example VSCode) look an instructions below how to do this manually
+# BOFINN Ltd. — Real Estate Website
 
-## How to run local server
-Get to the `webapp` directory: `cd webapp` and run `python3 manage.py runserver` from webapp folder
+**BOFINN** is a fictional real estate company inspired by the Swedish way of life—simplicity, functionality, and warmth. The name “BOFINN” comes from the Swedish words *bo* (to live) and *finna* (to find), reflecting our mission to help people find a place to live and thrive.
 
-*In some enviroments it could be not `python3` but `python`* 
+## 📁 About The Project
 
+This repository contains the full source code for the BOFINN company website, built with Django and Bootstrap. The site includes both front-end templates and back-end logic to support basic real estate operations.
 
-### How to set up a virtual environment:
+## 🔧 Features
 
-`python3 -m venv .venv` and then select new environment in a VSCode (bottom-right corner)
+- 🧭 **Navigation**: Clean and modern UI for browsing different pages.
+- 🏠 **Listings**: Browse available properties with descriptions and images.
+- ➕ **Add New Offers**: A form for authenticated users to add new offers.
+- 🔐 **User Authentication**: Logging-in for the company employees (in the footer; registration enabled for demonstration purposes only).
+- 📩 **Contact Form**: Users can send messages via a contact form.
 
-### How to switch to a virtual environment in a terminal
+## 🛠️ Installation
 
-Run `.venv\Scripts\Activate`. Then you will see (.venv) on the left from a CLI prompt
+To run this project locally:
 
-### How to install all dependencies in an env
+### 1. Clone the repository
+```bash
+git clone https://github.com/krzdur/bofinn-app.git
+cd bofinn-app
+```
 
-`pip3 install -r requirements.txt`
-
-### How Quit the server :
-Quit the server with CTRL-C in command line
-
-## Happy coding!
+### 2. Run `start` command which:
+* installs requirements
+* runs database migration
+* adds example offers to the database (to avoid commiting database to the repo)
+* starts the server
+```commandline
+make start
+```
