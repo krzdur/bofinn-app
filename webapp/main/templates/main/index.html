@@ -24,7 +24,7 @@
                 <div class="carousel-caption d-none d-md-block">
                     <h2>Beautiful Modern Homes</h2>
                     <p>Discover properties that combine Scandinavian design with practical comfort</p>
-                    <button type="button" class="btn btn-primary">View Properties</button>
+                    <a href="{% url 'properties' %}" type="button" class="btn btn-primary">View Properties</a>
                 </div>
             </div>
 
@@ -35,7 +35,7 @@
                 <div class="carousel-caption d-none d-md-block">
                     <h2>Interior Design Excellence</h2>
                     <p>Transform your space with our Scandinavian-inspired design services</p>
-                    <button type="button" class="btn btn-primary">Explore Designs</button>
+                    <a href="{% url 'interior' %}" class="btn btn-primary">Explore Designs</a>
                 </div>
             </div>
 
@@ -46,7 +46,7 @@
                 <div class="carousel-caption d-none d-md-block">
                     <h2>Personal Consultation</h2>
                     <p>Work with dedicated agents who understand your needs</p>
-                    <button type="button" class="btn btn-primary">Meet Our Team</button>
+                    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#contactModal">Meet Our Team</button>
                 </div>
             </div>
         </div>
@@ -69,8 +69,8 @@
         <h1 class="display-4 fw-bold">Find the place where you'll love living</h1>
         <p class="lead mb-4">Your Comfort - Our Priority</p>
         <div class="d-grid gap-2 d-sm-flex justify-content-sm-center">
-            <button type="button" class="btn btn-primary btn-lg px-4 gap-3">Explore Properties</button>
-            <button type="button" class="btn btn-outline-light btn-lg px-4">Learn More</button>
+            <a href="{% url 'properties' %}" type="button" class="btn btn-primary btn-lg px-4 gap-3">Explore Properties</a>
+            <a href="{% url 'about' %}" type="button" class="btn btn-outline-light btn-lg px-4">Learn More</a>
         </div>
     </div>
 </section>
@@ -163,17 +163,17 @@
         <div class="row g-4">
             <div class="col-md-3">
                 <div class="d-grid">
-                    <a href="#" class="btn btn-outline-primary">View our latest properties</a>
+                    <a href="{% url 'properties' %}" class="btn btn-outline-primary">View our latest properties</a>
                 </div>
             </div>
             <div class="col-md-3">
                 <div class="d-grid">
-                    <a href="#" class="btn btn-outline-primary">Schedule a consultation</a>
+                    <a href="#" class="btn btn-outline-primary" data-bs-toggle="modal" data-bs-target="#contactModal">Schedule a consultation</a>
                 </div>
             </div>
             <div class="col-md-3">
                 <div class="d-grid">
-                    <a href="#" class="btn btn-outline-primary">Discover our interior design projects</a>
+                    <a href="{% url 'interior' %}" class="btn btn-outline-primary">Discover our interior design projects</a>
                 </div>
             </div>
             <div class="col-md-3">
